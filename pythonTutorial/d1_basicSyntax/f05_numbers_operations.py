@@ -5,7 +5,8 @@
 exponents = 10 ** 2
 print(exponents)
 
-
+exponents = 2 ** 4
+print(exponents)
 """
 This is a multi-line comment
 Modulo - It returns the remainder

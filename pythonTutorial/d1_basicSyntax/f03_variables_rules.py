@@ -3,6 +3,7 @@ variables rules
 """
 
 import keyword
+# List of reserved words
 print(keyword.kwlist)
 
 
