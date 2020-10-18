@@ -1,8 +1,9 @@
 import pytest
+# To Run Tests: py.test 
 
 @pytest.fixture()
 def setUp():
-    print("Running demo1 setUp")
+    print("\nRunning demo1 setUp")
 
 def test_demo1_methodA(setUp):
     print("Running demo1 method A")

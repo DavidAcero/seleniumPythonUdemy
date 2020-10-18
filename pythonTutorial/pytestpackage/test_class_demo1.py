@@ -1,5 +1,5 @@
 import pytest
-from pytestpackage.class_to_test import SomeClassToTest
+from class_to_test import SomeClassToTest
 
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 class TestClassDemo():

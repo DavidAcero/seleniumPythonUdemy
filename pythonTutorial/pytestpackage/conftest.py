@@ -1,4 +1,5 @@
 import pytest
+# Here you can defined methods used on other files conftest = configuration Test
 
 @pytest.yield_fixture()
 def setUp():

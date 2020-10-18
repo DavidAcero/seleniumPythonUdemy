@@ -1,5 +1,7 @@
 import pytest
-from pytestpackage.class_to_test import SomeClassToTest
+from class_to_test import SomeClassToTest
+# pip3 install pytest-html
+# py.test --html=result.html
 
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 class TestReportingDemo():
@@ -15,5 +17,5 @@ class TestReportingDemo():
 
     def test_methodB(self):
         result = self.abc.sumNumbers(2, 8)
-        assert result > 20
+        assert result > 7
         print("Running method B")
