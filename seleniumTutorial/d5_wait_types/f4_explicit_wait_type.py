@@ -1,5 +1,5 @@
 from traceback import print_stack
-from utilities.handy_wrappers import HandyWrappers
+from seleniumTutorial.d04_utilities.handy_wrappers import HandyWrappers
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *

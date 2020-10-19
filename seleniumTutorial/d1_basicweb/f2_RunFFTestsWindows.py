@@ -12,6 +12,7 @@ class RunFFTests():
         driver = webdriver.Firefox()
         # Open the provided URL
         driver.get("http://www.letskodeit.com")
+        driver.close()
 
 ff = RunFFTests()
 ff.test()

@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from utilities.handy_wrappers import HandyWrappers
+from d04_utilities.handy_wrappers import HandyWrappers
 import time
 
 
