@@ -16,8 +16,8 @@ sum1 = sum_nums(2, 8)
 
 sum2 =  sum_nums(3, 3)
 
-string_add = sum_nums('one', 2)
-print(string_add)
+#string_add = sum_nums('one', 2)
+#print(string_add)
 
 print(sum1)
 print("*************")

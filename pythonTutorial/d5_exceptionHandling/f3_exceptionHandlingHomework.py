@@ -1,6 +1,10 @@
 def exceptionHandling():
     try:
-        car = {"make": "bmw", "model": "550i", "year": "2016"}
+        car = {
+                "make": "bmw", 
+                "model": "550i", 
+                "year": "2016"
+                }
         print(car["color"])
     except:
         print("Key not found")

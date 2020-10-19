@@ -16,12 +16,14 @@ class Car(object):
 
 
 
-c1 = Car('bmw', '550i')
-print(c1.make)
+#c1 = Car('bmw', '550i')
+#print(c1.make)
 #c1.info()
 
 c2 = Car('benz', 'E350')
 print(c2.make)
-#c2.info()
+print(c2.wheels)
+print(c2.info())
 
+print("*" * 20)
 print(Car.wheels)
