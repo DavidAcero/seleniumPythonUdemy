@@ -1,0 +1,7 @@
+pages/landing/__pycache__/
+tests/landing/__pycache__/
+tests/__pycache__/
+base/__pycache__/
+utilities/__pycache__/
+.pytest_cache/*
+/automation.log

@@ -1,23 +1,24 @@
 from selenium import webdriver
 from pages.landing.landingPage import LandingPage
+import unittest
+import pytest
 
-class titleTest():
+@pytest.mark.usefixtures("oneTimeSetUp", "setUp")
+class titleTest(unittest.TestCase):
     
-    def test_validNumber(self):
-        baseUrl = "https://wl.primeraplus.com.mx/"
-        driver = webdriver.Chrome()
-        driver.maximize_window()
-        driver.get(baseUrl)
-        driver.implicitly_wait(3)
-        
-        lp = LandingPage(driver)
-        # number = lp.login("acero.david.17@gmail.com", "PrimeraPlus123")
-        # driver.implicitly_wait(5)
-        title = lp.getMainTitle()
-        assert title == "Bienvenido a la nueva experiencia de compra"
-        
-        driver.quit()
+    @pytest.fixture(autouse=True)
+    def classSetup(self, oneTimeSetUp):
+        self.lp = LandingPage(self.driver)
+    
+    @pytest.mark.run(order=2)
+    def test_validLogin(self):
+        self.lp.login("Admin", "admin123")
+        result = self.lp.verifyLoginSuccesful()
+        assert result == True
 
-
-cc = titleTest()
-cc.test_validNumber()
+    @pytest.mark.run(order=1)
+    def test_invalidLogin(self):
+        self.lp.login("Admin", "wrongPassword")
+        # title = lp.checkUser()
+        result = self.lp.verifyLoginFailed()
+        assert result == True
